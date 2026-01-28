@@ -70,6 +70,6 @@ git commit -m "Initial commit: add README with git setup notes"
 
 #on github repo set up page, scrolled down and copied these ssh version commands
 git remote add origin git@github.com:chris-hegde/Sandbox_26.git #connect local repo to github
-git branch -M main #rename branch to main 
+git branch -M main #rename branch (created with git init) to main 
 git push -u origin main  #push commits to github
 ```
