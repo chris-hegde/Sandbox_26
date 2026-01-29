@@ -73,3 +73,28 @@ sbatch nf_rnaseq_submit.sh #if successful, should see a job ID
 squeue -u ch1199 #R for running, PD = pending 
 
 ```
+## Check test output 
+
+```bash
+
+cd test_results
+ls # see these files bbsplit  custom  fastqc  fq_lint  multiqc  pipeline_info  salmon  star_salmon  trimgalore
+
+# important QC files 
+
+ls multiqc/
+ls fastqc
+
+# check html multiQC
+cd multiqc/star_salmon/
+ls #multiqc_report_data  multiqc_report.html  multiqc_report_plots
+```
+
+## To view multiqc html (on local terminal), use scp to download file from amarel
+
+```bash
+scp ch1199@amarel.rutgers.edu:/scratch/ch1199/nextflow_test/test_results/multiqc/star_salmon/multiqc_report.html ~/Downloads/
+
+open ~/Downloads/multiqc_report.html #opens in browser
+
+```
